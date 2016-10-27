@@ -1,0 +1,15 @@
+pipelines:
+    pipe1:
+        group: unc-plugins
+        locking: off
+        materials:
+            git:
+                git: https://github.com/tomzo/gocd-indep-config-part.git
+                branch: master
+        stages:
+            - test:
+                clean_workspace: true
+                jobs:
+                    test:
+                        tasks:
+                            - script: echo PLACEHOLDER
